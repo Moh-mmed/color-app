@@ -1,0 +1,29 @@
+TODO:
+- [x] Create your app 
+- [ ] Install needed tools: 
+      - Material UI: for React component
+      - react-copy-to-clipboard: a package hepls to add copy to clipboard functionality  
+      - Chroma.js: a library to manipulate colors  
+
+
+
+- [x] start with buiding individual Palette component, passing eache object from seedColors.js as props. 
+      each Palette has bunch color boxes, then build color box component 
+
+- [x] Style palette and box color 
+
+- [x] Add the copytoclipboard functionality to copy button using `react-copy-to-clipboard package`, and an 
+      overlay showing up once the copy button is clicked
+
+- [ ] Generate colors automatically with different degrees using `Chroma.js`
+
+
+
+
+
+
+
+
+
+
+- [ ] Puch all project to github
