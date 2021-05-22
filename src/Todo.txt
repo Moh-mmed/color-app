@@ -15,7 +15,12 @@ TODO:
 - [x] Add the copytoclipboard functionality to copy button using `react-copy-to-clipboard package`, and an 
       overlay showing up once the copy button is clicked
 
-- [ ] Generate colors automatically with different degrees using `Chroma.js`
+- [x] Generate colors automatically with different degrees using `Chroma.js`
+
+- [x] Display colors inside a palette along side with setting up a slider and a list option to choose color degree and type from 
+      using react-component/slider
+
+- [x] Add a navbar and customize a drop down manue using Material UI library  
 
 
 

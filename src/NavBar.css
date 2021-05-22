@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+.NavBar {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: #f7f7f7;
+}
+.Logo {
+  height: 100%;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  padding: 0 10px;
+  background-color: #e5e5e5;
+}
+.Slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  padding: 3px 0;
+  margin: 0 20px;
+  margin-left: auto;
+  width: 460px;
+}
+.slider-title {
+  width: 20%;
+  margin-right: 2%;
+}
+.rc-slider {
+  display: inline-block;
+  height: 20px;
+  width: 78%;
+}
+.rc-slider-track {
+  background-color: #8473de;
+  height: 8px;
+}
+.rc-slider-rail {
+  height: 8px;
+}
+.rc-slider-handle,
+.rc-slider-handle:active,
+.rc-slider-handle:focus,
+.rc-slider-handle:hover {
+  background-color: #57c5f7;
+  outline: none;
+  border: 1.5px solid #57c5f7;
+  box-shadow: none;
+  width: 20px;
+  height: 20px;
+  margin-top: -5px;
+}
+.select-box {
+  width: 245px;
+  text-align: end;
+  margin: 0 5px;
+}
