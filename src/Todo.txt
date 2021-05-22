@@ -22,6 +22,8 @@ TODO:
 
 - [x] Add a navbar and customize a drop down manue using Material UI library  
 
+- [x] Add a snackbar using Material UI library  
+
 
 
 
