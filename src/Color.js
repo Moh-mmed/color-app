@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import Snackbar from "@material-ui/core/Snackbar";
-import { generatePalette } from "./colorHelper";
 import NavBar from "./NavBar";
 import ColorBox from "./ColorBox";
-import seedColors from "./seedColors";
+import PaletteFooter from "./PaletteFooter";
 import "./Color.css";
 
 class Color extends Component {
@@ -13,16 +12,13 @@ class Color extends Component {
         format: "hex",
         open:false
     };
-    this.params = this.props.match.params;
-    this.shades = this.gatherShades(this.params.colorID);
+    this.shades = this.gatherShades(this.props.match.params.colorID);
     this.changeColorFormat = this.changeColorFormat.bind(this);
     this.handleClick = this.handleClick.bind(this);
 
   }
   gatherShades(id) {
-    const palette = generatePalette(
-      seedColors.find((color) => color.id === this.params.paletteID)
-    );
+    const palette = this.props.palette
     let shades = [];
     for (let shade in palette.colors) {
       shades.push(palette.colors[shade].filter((color) => color.id === id)[0]);
@@ -38,6 +34,7 @@ class Color extends Component {
         console.log(this.props.history.goBack());
     }
     render() {
+      const { paletteName , emoji} = this.props.palette;
       const {format,open} = this.state
     const shades = this.shades.map((color) => (
       <ColorBox
@@ -47,7 +44,7 @@ class Color extends Component {
         singleColor={true}
       />
     ));
-    console.log(shades);
+
     return (
       <div className="Color-container">
         <NavBar
@@ -74,6 +71,7 @@ class Color extends Component {
           }}
           autoHideDuration={1500}
         />
+        <PaletteFooter paletteName={paletteName} emoji={emoji} />
       </div>
     );
   }

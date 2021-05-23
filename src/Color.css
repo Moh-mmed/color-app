@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 .Color-container .colors {
-  height: calc(100% - 40px);
+  height: calc(100% - 68px);
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 20%);
