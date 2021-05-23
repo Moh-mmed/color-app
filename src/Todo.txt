@@ -37,6 +37,8 @@ TODO:
 
 - [x] Add the individual color page
 
+- [x] Add GoBack functionality to single color page
+
 
 
 

@@ -16,6 +16,7 @@ class Color extends Component {
     this.params = this.props.match.params;
     this.shades = this.gatherShades(this.params.colorID);
     this.changeColorFormat = this.changeColorFormat.bind(this);
+    this.handleClick = this.handleClick.bind(this);
 
   }
   gatherShades(id) {
@@ -32,7 +33,10 @@ class Color extends Component {
     this.setState({ format: e.target.value, open: true }, () => {
       setTimeout(() => this.setState({ open: false }), 1500);
     });
-  }
+    }
+    handleClick() {
+        console.log(this.props.history.goBack());
+    }
     render() {
       const {format,open} = this.state
     const shades = this.shades.map((color) => (
@@ -51,7 +55,12 @@ class Color extends Component {
           changeFormat={this.changeColorFormat}
           show={false}
         />
-        <div className="colors">{shades}</div>
+        <div className="colors">
+          {shades}
+          <div className="go-back">
+            <span onClick={this.handleClick}>GoBack</span>
+          </div>
+        </div>
         <Snackbar
           open={open}
           anchorOrigin={{ vertical: "bottom", horizontal: "left" }}

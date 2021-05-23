@@ -11,6 +11,14 @@
   display: grid;
   grid-template-columns: repeat(5, 20%);
 }
-.color {
-  width: 100%;
+.go-back {
+  background-color: #9f9fa0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.go-back span {
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
 }
