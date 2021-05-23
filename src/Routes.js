@@ -9,14 +9,17 @@ class Routes extends Component {
           <div>
             <Switch>
               <Route
-                exact
                 path="/palette/:name"
                 render={(routeParams) => {
                   return <Palette {...routeParams} />;
                 }}
               />
               <Route path="/new-palette" render={() => <NewPalette />} />;
-              <Route path="/" render={() => <PaletteList />} />;
+              <Route
+                path="/"
+                render={(routeProps) => <PaletteList {...routeProps} />}
+              />
+              ;
             </Switch>
           </div>
         );

@@ -5,11 +5,13 @@ import MinPalette from "./MinPalette";
 import seedColors from "./seedColors";
 import PaletteListStyles from "./PaletteListStyles";
 class PaletteList extends Component {
+   goToPalette(id) {
+      this.props.history.push(`/palette/${id}`)
+    }
     render() {
         const { classes } = this.props
-        console.log(classes.root)
         const palettes = seedColors.map((palette) => (
-            <MinPalette palette={palette}/>
+          <MinPalette palette={palette} handleClick={()=>this.goToPalette(palette.id)}/>
         ));
     return (
       <div className={classes.root}>
