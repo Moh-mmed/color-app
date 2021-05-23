@@ -1,25 +1,29 @@
 import React, { Component } from 'react'
+import { Route, Switch} from "react-router-dom";
 import Palette from "./Palette";
 import PaletteList from "./PaletteList";
 import NewPalette from "./NewPalette";
-import { Route, Switch} from "react-router-dom";
+import Color from "./Color";
 class Routes extends Component {
     render() {
         return (
           <div>
             <Switch>
               <Route
-                path="/palette/:name"
+                exact path="/palette/:name"
                 render={(routeParams) => {
                   return <Palette {...routeParams} />;
                 }}
               />
-              <Route path="/new-palette" render={() => <NewPalette />} />;
+              <Route exact path="/new-palette" render={() => <NewPalette />} />;
               <Route
-                path="/"
+                exact path="/"
                 render={(routeProps) => <PaletteList {...routeProps} />}
               />
-              ;
+              <Route
+                exact path="/palette/:paletteID/:colorID"
+                render={(routeProps) => <Color {...routeProps} />}
+              />
             </Switch>
           </div>
         );

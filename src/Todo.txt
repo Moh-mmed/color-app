@@ -35,6 +35,7 @@ TODO:
 - [x] Refectoring css-styles to JSS using material-ui/styles: npm install --save @material-ui/styles
 
 
+- [x] Add the individual color page
 
 
 

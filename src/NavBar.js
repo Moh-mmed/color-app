@@ -8,26 +8,28 @@ import "./NavBar.css"
 class NavBar extends Component {
   constructor(props) {
     super(props);
-      this.state = { format: 'hex' };
+      this.state = { format: 'hex'};
  }
   render() {
     return (
       <nav className="NavBar">
-            <div className="Logo">
-                <NavLink exact to="/">
-                    colorify
-                </NavLink>
-            </div>
-        <div className="Slider-container">
-          <p className="slider-title">Level : {this.props.degree}</p>
-          <Slider
-            defaultValue={this.props.degree}
-            min={100}
-            max={900}
-            step={100}
-            onAfterChange={this.props.changeDegree}
-          />
+        <div className="Logo">
+          <NavLink exact to="/">
+            colorify
+          </NavLink>
         </div>
+          {this.props.show && (
+            <div className="Slider-container">
+              <p className="slider-title">Level : {this.props.degree}</p>
+                <Slider
+                  defaultValue={this.props.degree}
+                  min={100}
+                  max={900}
+                  step={100}
+                  onAfterChange={this.props.changeDegree}
+                />
+            </div>
+          )}
         <div className="select-box">
           <Select
             defaultValue={this.state.format}

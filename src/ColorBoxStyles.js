@@ -8,8 +8,16 @@ const ColorBoxStyles = {
     cursor: "pointer",
     marginBottom: "-3.9px",
     "&:hover button": {
-        opacity: 1,
-        transition: "0.4s",
+      opacity: 1,
+      transition: "0.4s",
+    },
+  },
+  rootSingle: {
+    position: "relative",
+    cursor: "pointer",
+    "&:hover button": {
+      opacity: 1,
+      transition: "0.4s",
     },
   },
   copyButton: {

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Snackbar from "@material-ui/core/Snackbar";
+import { withStyles } from "@material-ui/core/styles";
 import ColorBox from './ColorBox'
 import NavBar from "./NavBar";
-import { generatePalette } from "./colorHelper";
-import { withStyles } from "@material-ui/core/styles";
 import PaletteStyles from "./PaletteStyles";
+import { generatePalette } from "./colorHelper";
 import seedColors from './seedColors';
 class Palette extends Component {
   constructor(props) {
@@ -26,14 +26,20 @@ class Palette extends Component {
     });
   }
     render() {
-        
+  
     const {classes} = this.props  
-    const {colors,paletteName, emoji} = generatePalette(seedColors.find(
+    const {colors,paletteName, emoji,id} = generatePalette(seedColors.find(
         (color) => color.id === this.props.match.params.name
     ))
     const { deg, format, open } = this.state
     const paletteColors = colors[deg].map((color) => (
-      <ColorBox background={color[format]} name={color.name} key={color.id} />
+      <ColorBox
+        background={color[format]}
+        name={color.name}
+        key={color.id}
+        singleColor={false}
+        moreURL={`/palette/${id}/${color.id}`}
+      />
     ));
     return (
       <div className={classes.root}>
@@ -42,6 +48,7 @@ class Palette extends Component {
           format={format}
           changeDegree={this.changeColorDegree}
           changeFormat={this.changeColorFormat}
+          show={true}
         />
         <div className={classes.colors}>{paletteColors}</div>
         <Snackbar

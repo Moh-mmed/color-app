@@ -1,0 +1,16 @@
+.Color-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.Color-container .colors {
+  height: calc(100% - 40px);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+}
+.color {
+  width: 100%;
+}
