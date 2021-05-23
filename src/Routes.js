@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Palette from "./Palette";
 import PaletteList from "./PaletteList";
+import NewPalette from "./NewPalette";
 import { Route, Switch} from "react-router-dom";
 class Routes extends Component {
     render() {
@@ -14,6 +15,7 @@ class Routes extends Component {
                   return <Palette {...routeParams} />;
                 }}
               />
+              <Route path="/new-palette" render={() => <NewPalette />} />;
               <Route path="/" render={() => <PaletteList />} />;
             </Switch>
           </div>

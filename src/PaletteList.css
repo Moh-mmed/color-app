@@ -1,4 +1,4 @@
-.Palette-list {
+/* .Palette-list {
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -14,49 +14,40 @@
   width: 60%;
   padding-bottom: 40px;
   overflow-wrap: normal;
-}
-.Palette-list .Palette-list-container .head {
+} */
+/* .Palette-list .Palette-list-container .head {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   padding: 10px 20px;
   margin: 10px 0 30px;
-}
-.Palette-list .Palette-list-container .head h1 {
+} */
+/* .Palette-list .Palette-list-container .head h1 {
   font-size: 3rem;
-}
-.Palette-list .Palette-list-container .Palettes {
+} */
+/* .Palette-list .Palette-list-container .head a {
+  margin-bottom: -22px;
+  color: white;
+  text-decoration: none;
+} */
+/* .Palette-list .Palette-list-container .head a:after {
+  content: "";
+  display: block;
+  background-color: #ffffff;
+  width: 95%;
+  height: 1px;
+  margin: 0 auto;
+} */
+/* .Palette-list .Palette-list-container .Palettes {
   display: grid;
   grid-template-columns: repeat(3, 30%);
   gap: 5%;
   padding: 15px;
   width: 80%;
   margin: 0 auto;
-}
-.Palette-list .Palette-list-container .Palettes a {
+} */
+/* .Palette-list .Palette-list-container .Palettes a {
   text-decoration: none;
   color: inherit;
-}
-.Palette-list .Palette-list-container .Palettes .palette {
-  padding: 9px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  height: 140px;
-  cursor: pointer;
-}
-.Palette-list .Palette-list-container .Palettes .colors {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0;
-  height: 80%;
-}
-
-.Palette-list .Palette-list-container .Palettes .color-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-  margin: 5px 2px 0 2px;
-  height: 20%;
-}
+} */

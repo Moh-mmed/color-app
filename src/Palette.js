@@ -3,7 +3,8 @@ import Snackbar from "@material-ui/core/Snackbar";
 import ColorBox from './ColorBox'
 import NavBar from "./NavBar";
 import { generatePalette } from "./colorHelper";
-import "./Palette.css";
+import { withStyles } from "@material-ui/core/styles";
+import PaletteStyles from "./PaletteStyles";
 import seedColors from './seedColors';
 class Palette extends Component {
   constructor(props) {
@@ -25,6 +26,8 @@ class Palette extends Component {
     });
   }
     render() {
+        
+    const {classes} = this.props  
     const {colors,paletteName, emoji} = generatePalette(seedColors.find(
         (color) => color.id === this.props.match.params.name
     ))
@@ -33,14 +36,14 @@ class Palette extends Component {
       <ColorBox background={color[format]} name={color.name} key={color.id} />
     ));
     return (
-      <div className="Palette">
+      <div className={classes.root}>
         <NavBar
           degree={deg}
           format={format}
           changeDegree={this.changeColorDegree}
           changeFormat={this.changeColorFormat}
         />
-        <div className="Palette-colors">{paletteColors}</div>
+        <div className={classes.colors}>{paletteColors}</div>
         <Snackbar
           open={open}
           anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
@@ -54,9 +57,9 @@ class Palette extends Component {
           }}
           autoHideDuration={1500}
         />
-        <footer className="Palette-footer">
+        <footer className={classes.footer}>
           {paletteName}
-          <span className="emoji">
+          <span className={classes.emoji}>
             <i className={emoji} aria-label="Germany Flag"></i>
           </span>
         </footer>
@@ -64,4 +67,4 @@ class Palette extends Component {
     );
   }
 }
-export default  Palette 
+export default withStyles(PaletteStyles)(Palette);

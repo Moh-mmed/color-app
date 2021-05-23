@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Chela+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 .NavBar {
   display: flex;
   align-items: center;
@@ -9,9 +9,10 @@
   height: 100%;
   line-height: 40px;
   text-transform: uppercase;
-  font-family: "Chela One", cursive;
+  font-family: "Rubik", sans-serif;
   font-size: 2rem;
-  letter-spacing: 1px;
+  letter-spacing: -1px;
+  font-weight: 600;
   padding: 0 10px;
   background-color: #e5e5e5;
 }

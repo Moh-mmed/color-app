@@ -32,6 +32,8 @@ TODO:
 
 - [x] Add Palette list to the home page and a route for each
 
+- [x] Refectoring css-styles to JSS using material-ui/styles: npm install --save @material-ui/styles
+
 
 
 

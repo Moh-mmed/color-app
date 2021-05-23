@@ -1,41 +1,29 @@
 import React, { Component } from 'react'
-import Palette from "./Palette";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { withStyles } from "@material-ui/core/styles";
+import MinPalette from "./MinPalette";
 import seedColors from "./seedColors";
-import "./PaletteList.css";
+import PaletteListStyles from "./PaletteListStyles";
 class PaletteList extends Component {
     render() {
+        const { classes } = this.props
+        console.log(classes.root)
         const palettes = seedColors.map((palette) => (
-          <Link to={`/palette/${palette.id}`}>
-            <div className="palette">
-              <div className="colors">
-                {palette.colors.map((color) => (
-                  <div
-                    className="color"
-                    style={{
-                      background: color.color,
-                    }}
-                  />
-                ))}
-              </div>
-              <div className="color-footer">
-                <span>{palette.paletteName}</span>
-                <i className={palette.emoji}></i>
-              </div>
-            </div>
-          </Link>
+            <MinPalette palette={palette}/>
         ));
     return (
-      <div className="Palette-list">
-        <div className="Palette-list-container">
-          <div className="head">
+      <div className={classes.root}>
+        <div className={classes.container}>
+          <div className={classes.head}>
             <h1>Colorful Palettes</h1>
-            <span>Create a palette</span>
+            <Link className={classes.newPaletteLink} to="/new-palette">
+              Create a palette
+            </Link>
           </div>
-          <div className="Palettes">{palettes}</div>
+          <div className={classes.palettes}>{palettes}</div>
         </div>
       </div>
     );
   }
 }
-export default PaletteList;
+export default withStyles(PaletteListStyles)(PaletteList);
