@@ -30,6 +30,8 @@ TODO:
 
 - [x] Start working on Routes
 
+- [x] Add Palette list to the home page and a route for each
+
 
 
 

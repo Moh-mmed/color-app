@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Palette from "./Palette";
-import { Route, Switch, NavLink } from "react-router-dom";
+import PaletteList from "./PaletteList";
+import { Route, Switch} from "react-router-dom";
 class Routes extends Component {
     render() {
         return (
@@ -13,7 +14,7 @@ class Routes extends Component {
                   return <Palette {...routeParams} />;
                 }}
               />
-              <Route path="/" render={() => <h1>WELCOME HOME</h1>} />;
+              <Route path="/" render={() => <PaletteList />} />;
             </Switch>
           </div>
         );

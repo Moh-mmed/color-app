@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Slider from "rc-slider"
+import {NavLink} from 'react-router-dom'
 import Select from "@material-ui/core/Select"
 import MenuItem from "@material-ui/core/MenuItem"
 import "rc-slider/assets/index.css"
@@ -12,7 +13,11 @@ class NavBar extends Component {
   render() {
     return (
       <nav className="NavBar">
-        <div className="Logo">colorify</div>
+            <div className="Logo">
+                <NavLink exact to="/">
+                    colorify
+                </NavLink>
+            </div>
         <div className="Slider-container">
           <p className="slider-title">Level : {this.props.degree}</p>
           <Slider
