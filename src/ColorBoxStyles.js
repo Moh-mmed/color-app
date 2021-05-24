@@ -6,7 +6,7 @@ const ColorBoxStyles = {
     display: "inline-block",
     position: "relative",
     cursor: "pointer",
-    marginBottom: "-3.9px",
+    marginBottom: "-4px",
     "&:hover button": {
       opacity: 1,
       transition: "0.4s",
@@ -30,14 +30,17 @@ const ColorBoxStyles = {
     marginLeft: "-50px",
     textAlign: "center",
     outline: "none",
-    background: " rgba(255, 255, 255, 0.3)",
+    background: "rgb(255 255 255 / 66%)  ",
     fontSize: "1rem",
     lineHeight: "30px",
-    color: "white",
     textTransform: "uppercase",
     border: "none",
     borderRadius: "5px",
     opacity: 0,
+    "&.isLight": {
+      color: "white",
+      backgroundColor: "rgba(255, 255, 255, 0.3)",
+    },
   },
   boxContent: {
     position: "absolute",
@@ -49,6 +52,10 @@ const ColorBoxStyles = {
     textTransform: "uppercase",
     letterSpacing: "1px",
     fontSize: "12px",
+    "& span.isLight": {
+      color: "white",
+      fontSize: ".75rem",
+    },
   },
   more: {
     display: "inline-block",
@@ -57,16 +64,21 @@ const ColorBoxStyles = {
     border: "none",
     right: 0,
     bottom: 0,
-    color: "white",
+    color: "black",
     width: "52px",
     height: "26px",
     fontSize: "13px",
+    fontWeight: 600,
     textAlign: "center",
     lineHeight: "26px",
     textTransform: "uppercase",
     letterSpacing: "0.7px",
     cursor: "pointer",
+    "&.isLight": {
+      color: "white",
+    },
   },
+  // ,
   copiedOverlay: {
     opacity: 0,
     zIndex: 0,
@@ -93,7 +105,7 @@ const ColorBoxStyles = {
     height: "100%",
     zIndex: 0,
     opacity: 0,
-    color: "#cccccc",
+    color: "#6b6969",
     transform: "scale(0.1)",
     "&.copied": {
       opacity: 1,
@@ -108,10 +120,16 @@ const ColorBoxStyles = {
       textAlign: "center",
       textTransform: "uppercase",
       lineHeight: "30px",
+      "&.isLight": {
+        color: "white",
+      },
     },
     "& p": {
       marginTop: "5px",
       fontSize: "0.5em",
+      "&.isLight": {
+        color: "white",
+      },
     },
   },
 };

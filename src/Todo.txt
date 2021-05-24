@@ -39,6 +39,7 @@ TODO:
 
 - [x] Add GoBack functionality to single color page
 
+- [x] Adjust displayed text so its luminance change according to color level
 
 
 

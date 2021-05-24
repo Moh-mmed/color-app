@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { withStyles } from "@material-ui/core/styles";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import chroma from "chroma-js";
 import ColorBoxStyles from "./ColorBoxStyles";
 class ColorBox extends Component {
     constructor(props) {
@@ -15,42 +16,51 @@ class ColorBox extends Component {
           this.setState({ copied: false});
         }, 1100);
     }
-    render() {
-      const { classes, background, name, moreURL , singleColor } = this.props;
-        return (
-          <CopyToClipboard text={background} onCopy={this.handleCopy}>
-            <div
-              style={{ background /* assigning background to background*/ }}
-              className={singleColor ? classes.rootSingle : classes.root}
-            >
-              <div
-                style={{ background }}
-                className={`${classes.copiedOverlay} ${
-                  this.state.copied && "copied"
-                }`}
-              />
-              <div
-                className={`${classes.copiedText} ${
-                  this.state.copied && "copied"
-                }`}
-              >
-                <h2>Copied</h2>
-                <p>{this.props.background}</p>
-              </div>
-              <div className="Copy-container">
-                <div className={classes.boxContent}>
-                  <span>{name}</span>
-                </div>
-                <button className={classes.copyButton}>Copy</button>
-              </div>
-              {!singleColor && (
-                <Link to={moreURL} onClick={(e) => e.stopPropagation()}>
-                  <span className={classes.more}>More</span>
-                </Link>
-              )}
+  render() {
+    const { classes, background, name, moreURL , singleColor } = this.props;
+    const isLight = chroma(background).luminance() <= 0.5;
+    return (
+      <CopyToClipboard text={background} onCopy={this.handleCopy}>
+        <div
+          style={{ background /* assigning background to background*/ }}
+          className={singleColor ? classes.rootSingle : classes.root}
+        >
+          <div
+            style={{ background }}
+            className={`${classes.copiedOverlay} ${
+              this.state.copied && "copied"
+            }`}
+          />
+          <div
+            className={`${classes.copiedText} ${this.state.copied && "copied"}`}
+          >
+            <h2 className={isLight && "isLight"}>Copied</h2>
+            <p className={isLight && "isLight"}>{this.props.background}</p>
+          </div>
+          <div className="Copy-container">
+            <div className={classes.boxContent}>
+              <span className={isLight && "isLight"}>{name}</span>
             </div>
-          </CopyToClipboard>
-        );
+            <button
+              className={
+                isLight ? `${classes.copyButton} isLight` : classes.copyButton
+              }
+            >
+              Copy
+            </button>
+          </div>
+          {!singleColor && (
+            <Link to={moreURL} onClick={(e) => e.stopPropagation()}>
+              <span
+                className={isLight ? `${classes.more} isLight` : classes.more}
+              >
+                More
+              </span>
+            </Link>
+          )}
+        </div>
+      </CopyToClipboard>
+    );
     }
 }
 export default withStyles(ColorBoxStyles)(ColorBox);

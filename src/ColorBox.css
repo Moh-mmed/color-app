@@ -7,10 +7,10 @@
   cursor: pointer;
   margin-bottom: -3.9px;
 } */
-.ColorBox:hover .Copy-button {
+/* .ColorBox:hover .Copy-button {
   opacity: 1;
   transition: 0.6s;
-}
+} */
 /* .Copy-button {
   width: 100px;
   height: 32px;

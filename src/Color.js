@@ -38,7 +38,7 @@ class Color extends Component {
       const {format,open} = this.state
     const shades = this.shades.map((color) => (
       <ColorBox
-        key={color.id}
+        key={color.name}
         background={color[format]}
         name={color.name}
         singleColor={true}

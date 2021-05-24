@@ -5,8 +5,6 @@ import ColorBox from './ColorBox'
 import NavBar from "./NavBar";
 import PaletteFooter from "./PaletteFooter";
 import PaletteStyles from "./PaletteStyles";
-// import { generatePalette } from "./colorHelper";
-// import seedColors from './seedColors';
 class Palette extends Component {
   constructor(props) {
     super(props);
