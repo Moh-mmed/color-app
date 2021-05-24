@@ -2,23 +2,21 @@ import React, { Component } from 'react'
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { withStyles } from "@material-ui/core/styles";
 import { Link } from 'react-router-dom'
-import chroma from "chroma-js";
-import ColorBoxStyles from "./ColorBoxStyles";
+import ColorBoxStyles from "./styles/ColorBoxStyles";
 class ColorBox extends Component {
     constructor(props) {
         super(props)
-        this.state = { copied: false, showCopied:false }
+        this.state = { copied: false}
         this.handleCopy = this.handleCopy.bind(this) 
     }
     handleCopy(){
         this.setState({ copied: true });
         setTimeout(() => {
           this.setState({ copied: false});
-        }, 1100);
+        }, 1500);
     }
   render() {
     const { classes, background, name, moreURL , singleColor } = this.props;
-    const isLight = chroma(background).luminance() <= 0.5;
     return (
       <CopyToClipboard text={background} onCopy={this.handleCopy}>
         <div
@@ -34,17 +32,15 @@ class ColorBox extends Component {
           <div
             className={`${classes.copiedText} ${this.state.copied && "copied"}`}
           >
-            <h2 className={isLight && "isLight"}>Copied</h2>
-            <p className={isLight && "isLight"}>{this.props.background}</p>
+            <h2>Copied</h2>
+            <p>{this.props.background}</p>
           </div>
-          <div className="Copy-container">
+          <div>
             <div className={classes.boxContent}>
-              <span className={isLight && "isLight"}>{name}</span>
+              <span>{name}</span>
             </div>
             <button
-              className={
-                isLight ? `${classes.copyButton} isLight` : classes.copyButton
-              }
+              className={classes.copyButton}
             >
               Copy
             </button>
@@ -52,7 +48,7 @@ class ColorBox extends Component {
           {!singleColor && (
             <Link to={moreURL} onClick={(e) => e.stopPropagation()}>
               <span
-                className={isLight ? `${classes.more} isLight` : classes.more}
+                className={classes.more}
               >
                 More
               </span>

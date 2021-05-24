@@ -1,3 +1,4 @@
+import chroma from "chroma-js";
 const ColorBoxStyles = {
   root: {
     width: "20%",
@@ -30,17 +31,18 @@ const ColorBoxStyles = {
     marginLeft: "-50px",
     textAlign: "center",
     outline: "none",
-    background: "rgb(255 255 255 / 66%)  ",
+    background: (props) =>
+      chroma(props.background).luminance() <= 0.5
+        ? "rgba(255, 255, 255, 0.3)"
+        : "rgb(255 255 255 / 66%)",
+    color: (props) =>
+      chroma(props.background).luminance() <= 0.5 ? "white" : "black",
     fontSize: "1rem",
     lineHeight: "30px",
     textTransform: "uppercase",
     border: "none",
     borderRadius: "5px",
     opacity: 0,
-    "&.isLight": {
-      color: "white",
-      backgroundColor: "rgba(255, 255, 255, 0.3)",
-    },
   },
   boxContent: {
     position: "absolute",
@@ -52,8 +54,9 @@ const ColorBoxStyles = {
     textTransform: "uppercase",
     letterSpacing: "1px",
     fontSize: "12px",
-    "& span.isLight": {
-      color: "white",
+    "& span": {
+      color: (props) =>
+        chroma(props.background).luminance() <= 0.5 ? "white" : "black",
       fontSize: ".75rem",
     },
   },
@@ -64,7 +67,8 @@ const ColorBoxStyles = {
     border: "none",
     right: 0,
     bottom: 0,
-    color: "black",
+    color: (props) =>
+      chroma(props.background).luminance() <= 0.5 ? "white" : "black",
     width: "52px",
     height: "26px",
     fontSize: "13px",
@@ -74,17 +78,13 @@ const ColorBoxStyles = {
     textTransform: "uppercase",
     letterSpacing: "0.7px",
     cursor: "pointer",
-    "&.isLight": {
-      color: "white",
-    },
   },
-  // ,
   copiedOverlay: {
     opacity: 0,
     zIndex: 0,
     height: "100%",
     width: "100%",
-    transition: "transform 0.7s ease-in-out",
+    transition: "transform .7s ease-in-out",
     transform: "scale(0.01)",
     "&.copied": {
       opacity: 1,
@@ -105,7 +105,8 @@ const ColorBoxStyles = {
     height: "100%",
     zIndex: 0,
     opacity: 0,
-    color: "#6b6969",
+    color: (props) =>
+      chroma(props.background).luminance() <= 0.5 ? "white" : "#6b6969",
     transform: "scale(0.1)",
     "&.copied": {
       opacity: 1,
@@ -120,16 +121,10 @@ const ColorBoxStyles = {
       textAlign: "center",
       textTransform: "uppercase",
       lineHeight: "30px",
-      "&.isLight": {
-        color: "white",
-      },
     },
     "& p": {
       marginTop: "5px",
       fontSize: "0.5em",
-      "&.isLight": {
-        color: "white",
-      },
     },
   },
 };

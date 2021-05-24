@@ -42,7 +42,7 @@ class Routes extends Component {
                 render={(routeProps) => (
                   <Color
                     {...routeProps}
-                    palette={generatePalette(
+                    {...generatePalette(
                       this.findPalette(routeProps.match.params.paletteID)
                     )}
                   />

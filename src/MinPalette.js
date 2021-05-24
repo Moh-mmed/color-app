@@ -1,7 +1,6 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
-import { Link } from "react-router-dom";
-import MinPaletteStyles from "./MinPaletteStyles";
+import MinPaletteStyles from "./styles/MinPaletteStyles";
 
 function MinPalette(props) {
     const { classes ,palette } = props

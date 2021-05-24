@@ -4,7 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 import ColorBox from './ColorBox'
 import NavBar from "./NavBar";
 import PaletteFooter from "./PaletteFooter";
-import PaletteStyles from "./PaletteStyles";
+import PaletteStyles from "./styles/PaletteStyles";
 class Palette extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +21,7 @@ class Palette extends Component {
   }
   changeColorFormat(e) {
       this.setState({ format: e.target.value, open: true }, () => {
-        setTimeout(() => this.setState({ open: false }),1500);
+        setTimeout(() => this.setState({ open: false }),500);
     });
   }
     render() {

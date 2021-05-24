@@ -1,36 +1,38 @@
 import React, { Component } from 'react'
 import Slider from "rc-slider"
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import {withStyles} from '@material-ui/styles'
 import Select from "@material-ui/core/Select"
 import MenuItem from "@material-ui/core/MenuItem"
 import "rc-slider/assets/index.css"
-import "./NavBar.css"
+import NavBarStyles from "./styles/NavBarStyles";
 class NavBar extends Component {
   constructor(props) {
     super(props);
       this.state = { format: 'hex'};
  }
   render() {
+    const {classes} = this.props
     return (
-      <nav className="NavBar">
-        <div className="Logo">
+      <nav className={classes.main}>
+        <div className={classes.logo}>
           <NavLink exact to="/">
             colorify
           </NavLink>
         </div>
-          {this.props.show && (
-            <div className="Slider-container">
-              <p className="slider-title">Level : {this.props.degree}</p>
-                <Slider
-                  defaultValue={this.props.degree}
-                  min={100}
-                  max={900}
-                  step={100}
-                  onAfterChange={this.props.changeDegree}
-                />
-            </div>
-          )}
-        <div className="select-box">
+        {this.props.show && (
+          <div className={classes.slider}>
+            <p className="sliderTitle">Level : {this.props.degree}</p>
+            <Slider
+              defaultValue={this.props.degree}
+              min={100}
+              max={900}
+              step={100}
+              onAfterChange={this.props.changeDegree}
+            />
+          </div>
+        )}
+        <div className={classes.selectBox}>
           <Select
             defaultValue={this.state.format}
             onChange={this.props.changeFormat}
@@ -44,4 +46,4 @@ class NavBar extends Component {
     );
   }
 }
-export default NavBar
+export default withStyles(NavBarStyles)(NavBar)

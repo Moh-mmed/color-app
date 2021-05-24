@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import Snackbar from "@material-ui/core/Snackbar";
+import {withStyles} from "@material-ui/styles"
 import NavBar from "./NavBar";
 import ColorBox from "./ColorBox";
 import PaletteFooter from "./PaletteFooter";
-import "./Color.css";
+import ColorStyles from "./styles/ColorStyles";
 
 class Color extends Component {
   constructor(props) {
@@ -18,10 +19,11 @@ class Color extends Component {
 
   }
   gatherShades(id) {
-    const palette = this.props.palette
     let shades = [];
-    for (let shade in palette.colors) {
-      shades.push(palette.colors[shade].filter((color) => color.id === id)[0]);
+    for (let shade in this.props.colors) {
+      shades.push(
+        this.props.colors[shade].filter((color) => color.id === id)[0]
+      );
     }
     return shades.slice(1);
   }
@@ -31,10 +33,10 @@ class Color extends Component {
     });
     }
     handleClick() {
-        console.log(this.props.history.goBack());
+  this.props.history.goBack();
     }
     render() {
-      const { paletteName , emoji} = this.props.palette;
+      const { paletteName , emoji,classes} = this.props;
       const {format,open} = this.state
     const shades = this.shades.map((color) => (
       <ColorBox
@@ -46,15 +48,15 @@ class Color extends Component {
     ));
 
     return (
-      <div className="Color-container">
+      <div className={classes.main}>
         <NavBar
           format={format}
           changeFormat={this.changeColorFormat}
           show={false}
         />
-        <div className="colors">
+        <div className={classes.colors}>
           {shades}
-          <div className="go-back">
+          <div className={classes.goBack}>
             <span onClick={this.handleClick}>GoBack</span>
           </div>
         </div>
@@ -76,4 +78,4 @@ class Color extends Component {
     );
   }
 }
-export default Color
+export default withStyles(ColorStyles)(Color)
