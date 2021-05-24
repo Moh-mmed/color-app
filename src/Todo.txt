@@ -42,9 +42,8 @@ TODO:
 - [x] Adjust displayed text so its luminance change according to color level
 
 
+- [x] start wotking on CreateNew palette 
 
-
-
-
+- [x] Add the drawer and display available colors
 
 - [ ] Puch all project to github

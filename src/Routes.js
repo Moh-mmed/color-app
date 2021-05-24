@@ -16,6 +16,7 @@ class Routes extends Component {
         return (
           <div>
             <Switch>
+                <Route exact path="/palette/new-palette" render={() => <NewPalette />} />;
               <Route
                 exact
                 path="/palette/:name"
@@ -30,7 +31,7 @@ class Routes extends Component {
                   );
                 }}
               />
-              <Route exact path="/new-palette" render={() => <NewPalette />} />;
+            
               <Route
                 exact
                 path="/"

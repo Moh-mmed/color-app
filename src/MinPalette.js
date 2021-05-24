@@ -6,7 +6,6 @@ function MinPalette(props) {
     const { classes ,palette } = props
    
     return (
-      // <Link className={classes.paletteLink} to={`/palette/${palette.id}`}>
       <div className={classes.main} onClick={props.handleClick}>
         <div className={classes.colors}>
           {palette.colors.map((color) => (
@@ -22,7 +21,6 @@ function MinPalette(props) {
           <i className={palette.emoji}></i>
         </div>
       </div>
-      // </Link>
     );
 }
 
