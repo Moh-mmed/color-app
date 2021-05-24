@@ -46,4 +46,8 @@ TODO:
 
 - [x] Add the drawer and display available colors
 
+- [x] add an input for entering a color and validator using: npm install --save react-material-ui-form-validator
+
+- [x] Add draggable boxes and include them in newPalette route
+
 - [ ] Puch all project to github

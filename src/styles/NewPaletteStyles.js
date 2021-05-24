@@ -1,4 +1,3 @@
-
 const drawerWidth = 500;
 const useStyles = (theme) => ({
   root: {
@@ -19,7 +18,7 @@ const useStyles = (theme) => ({
     alignItems: "center",
     width: "100%",
     padding: "0 8px",
-    ...theme.mixins.toolbar,
+    // ...theme.mixins.toolbar,
     justifyContent: "flex-end",
   },
   content: {
