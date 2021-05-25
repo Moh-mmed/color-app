@@ -25,17 +25,17 @@ const useStyles = (theme) => ({
     flexGrow: 1,
     height: "calc(100vh - 64px)",
     padding: 0,
-    transition: theme.transitions.create("margin", {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
+    // transition: theme.transitions.create("margin", {
+    //   easing: theme.transitions.easing.sharp,
+    //   duration: theme.transitions.duration.leavingScreen,
+    // }),
     marginLeft: -drawerWidth,
   },
   contentShift: {
-    transition: theme.transitions.create("margin", {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
+    // transition: theme.transitions.create("margin", {
+    //   easing: theme.transitions.easing.easeOut,
+    //   duration: theme.transitions.duration.enteringScreen,
+    // }),
     marginLeft: 0,
   },
   container: {

@@ -15,6 +15,7 @@ import {ChromePicker} from 'react-color'
 import { colors } from '@material-ui/core';
 import useStyles from './styles/NewPaletteStyles'
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
+import DraggableColorBox from './DraggableColorBox'
 
 
 
@@ -156,11 +157,10 @@ class NewPalette extends Component {
           }
         >
           <div className={classes.drawerHeader} />
-          <ul>
+          
             {this.state.colors.map((color) => (
-              <li>{color}</li>
+              <DraggableColorBox color={color.color} name={color.name}/>
             ))}
-          </ul>
         </main>
       </div>
     );
