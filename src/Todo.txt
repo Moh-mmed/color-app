@@ -44,10 +44,17 @@ TODO:
 
 - [x] start wotking on CreateNew palette 
 
+- [x] add react color picker using: npm install react-color --save
 - [x] Add the drawer and display available colors
 
-- [x] add an input for entering a color and validator using: npm install --save react-material-ui-form-validator
+- [x] add an input for entering a color and validator using: npm install --save           react-material-ui-form-validator
 
 - [x] Add draggable boxes and include them in newPalette route
+
+- [ ] finishing the newPalette 
+
+- [ ] add an emoji picker using : npm install --save emoji-mart
+
+- [ ] finishing the newPalette 
 
 - [ ] Puch all project to github

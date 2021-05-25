@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
 import MinPalette from "./MinPalette";
-import seedColors from "./seedColors";
 import PaletteListStyles from "./styles/PaletteListStyles";
 class PaletteList extends Component {
    goToPalette(id) {
@@ -10,7 +9,7 @@ class PaletteList extends Component {
     }
     render() {
         const { classes } = this.props
-        const palettes = seedColors.map((palette) => (
+        const palettes = this.props.palettes.map((palette) => (
           <MinPalette palette={palette} handleClick={()=>this.goToPalette(palette.id)}/>
         ));
     return (

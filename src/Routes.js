@@ -9,49 +9,73 @@ import seedColors from "./seedColors";
 
 
 class Routes extends Component {
-  findPalette(id) {
-    return seedColors.find((color) => color.id === id);
+  constructor(props) {
+    super(props);
+    this.state = {
+      palettes: seedColors
+    }
+    this.findPalette = this.findPalette.bind(this);
+    this.saveNewPalette = this.saveNewPalette.bind(this);
   }
-    render() {
-        return (
-          <div>
-            <Switch>
-                <Route exact path="/palette/new-palette" render={() => <NewPalette />} />;
-              <Route
-                exact
-                path="/palette/:name"
-                render={(routeProps) => {
-                  return (
-                    <Palette
-                      {...routeProps}
-                      palette={generatePalette(
-                        this.findPalette(routeProps.match.params.name)
-                      )}
-                    />
-                  );
-                }}
+  findPalette(id) {
+    return this.state.palettes.find((color) => color.id === id);
+  }
+  saveNewPalette(newPalette) {
+    this.setState({ palettes: [...this.state.palettes, newPalette] });
+    console.log(this.state.palettes);
+  }
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route
+            exact
+            path="/palette/new-palette"
+            render={(routeProps) => (
+              <NewPalette
+                saveNewPalette={this.saveNewPalette}
+                palettes={this.state.palettes}
+                {...routeProps}
               />
-            
-              <Route
-                exact
-                path="/"
-                render={(routeProps) => <PaletteList {...routeProps} />}
-              />
-              <Route
-                exact
-                path="/palette/:paletteID/:colorID"
-                render={(routeProps) => (
-                  <Color
-                    {...routeProps}
-                    {...generatePalette(
-                      this.findPalette(routeProps.match.params.paletteID)
-                    )}
-                  />
+            )}
+          />
+          ;
+          <Route
+            exact
+            path="/palette/:name"
+            render={(routeProps) => {
+              return (
+                <Palette
+                  {...routeProps}
+                  palette={generatePalette(
+                    this.findPalette(routeProps.match.params.name)
+                  )}
+                />
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/"
+            render={(routeProps) => (
+              <PaletteList {...routeProps} palettes={this.state.palettes} />
+            )}
+          />
+          <Route
+            exact
+            path="/palette/:paletteID/:colorID"
+            render={(routeProps) => (
+              <Color
+                {...routeProps}
+                {...generatePalette(
+                  this.findPalette(routeProps.match.params.paletteID)
                 )}
               />
-            </Switch>
-          </div>
-        );
-    }
+            )}
+          />
+        </Switch>
+      </div>
+    );
+  }
 }
 export default Routes;
