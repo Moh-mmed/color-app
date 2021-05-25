@@ -11,9 +11,10 @@ import seedColors from "./seedColors";
 class Routes extends Component {
   constructor(props) {
     super(props);
+    const savedPalettes = JSON.parse(window.localStorage.getItem("palettes"));
     this.state = {
-      palettes: seedColors
-    }
+      palettes: savedPalettes || seedColors,
+    };
     this.findPalette = this.findPalette.bind(this);
     this.saveNewPalette = this.saveNewPalette.bind(this);
   }
@@ -21,8 +22,13 @@ class Routes extends Component {
     return this.state.palettes.find((color) => color.id === id);
   }
   saveNewPalette(newPalette) {
-    this.setState({ palettes: [...this.state.palettes, newPalette] });
-    console.log(this.state.palettes);
+      this.setState(
+        { palettes: [...this.state.palettes, newPalette] },
+        this.updateLocalStorage
+      );
+  }
+  updateLocalStorage() {
+window.localStorage.setItem("palettes", JSON.stringify(this.state.palettes));
   }
   render() {
     return (

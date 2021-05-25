@@ -53,13 +53,20 @@ TODO:
 
 - [x] finishing the newPalette styles
 
-- [ ] edit save, goback bottom in paletteFormNavBar when shrinking to small screens
 
 - [ ] add to localstorage
 
-- [ ] edit styles
+- [ ] edit styles , save, goback bottom in paletteFormNavBar when shrinking to small screens (working with sizes file)
 
 - [ ] customize scroll bar
+
+
+
+
+- [ ] clean up
+
+
+
 
 - [ ] Puch all project to github
 
@@ -74,6 +81,7 @@ Take away:
       - Using Color Picker  from "react-color" package
       - using emojis from emoji-mart package:   emoji-mart
       - Validate inputs using a package called react-material-ui-form-validator
+      - Drag and drop components by turning them to sortable list using react-sortable-hoc package
 
 
 

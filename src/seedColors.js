@@ -55,7 +55,8 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors Dutch",
     id: "flat-ui-colors-dutch",
-    emoji: <i className="em em-flag-de"></i>,
+    emoji: "em em-flag-de",
+    err: true,
     colors: [
       { name: "Sunflower", color: "#FFC312" },
       { name: "Energos", color: "#C4E538" },
@@ -82,7 +83,8 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors American",
     id: "flat-ui-colors-american",
-    emoji: <i className="em em-flag-um"></i>,
+    emoji: "em em-flag-um",
+    err: true,
     colors: [
       { name: "LightGreenishBlue", color: "#55efc4" },
       { name: "FadedPoster", color: "#81ecec" },
@@ -109,7 +111,8 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors Aussie",
     id: "flat-ui-colors-aussie",
-    emoji: <i className="em em-flag-au"></i>,
+    emoji: "em em-flag-au",
+    err: true,
     colors: [
       { name: "Beekeeper", color: "#f6e58d" },
       { name: "SpicedNectarine", color: "#ffbe76" },
@@ -136,7 +139,8 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors British",
     id: "flat-ui-colors-british",
-    emoji: <i className="em em-flag-ge"></i>,
+    emoji: "em em-flag-ge",
+    err: true,
     colors: [
       { name: "ProtossPylon", color: "#00a8ff" },
       { name: "Periwinkle", color: "#9c88ff" },
@@ -163,7 +167,8 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors Spanish",
     id: "flat-ui-colors-spanish",
-    emoji: <i className="em em-flag-ea"></i>,
+    emoji: "em em-flag-ea",
+    err: true,
     colors: [
       { name: "JacksonsPurple", color: "#40407a" },
       { name: "C64Purple", color: "#706fd3" },
@@ -190,7 +195,8 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors Indian",
     id: "flat-ui-colors-indian",
-    emoji: <i className="em em-flag-in"></i>,
+    emoji: "em em-flag-in",
+    err: true,
     colors: [
       { name: "OrchidOrange", color: "#FEA47F" },
       { name: "SpiroDiscoBall", color: "#25CCF7" },
@@ -213,6 +219,6 @@ const seedColors = [
       { name: "PineGlade", color: "#BDC581" },
       { name: "HighlighterLavender", color: "#82589F" },
     ],
-  }
+  },
 ];
 export default seedColors

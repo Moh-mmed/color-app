@@ -4,7 +4,9 @@ import MinPaletteStyles from "./styles/MinPaletteStyles";
 
 function MinPalette(props) {
     const { classes ,palette } = props
-   
+  // const emojiChecker = () => {
+  //    return palette.err ? <i className={palette.emoji}></i> : palette.emoji;
+  //  }
     return (
       <div className={classes.main} onClick={props.handleClick}>
         <div className={classes.colors}>
@@ -18,7 +20,7 @@ function MinPalette(props) {
         </div>
         <div className={classes.footer}>
           <span>{palette.paletteName}</span>
-          {palette.emoji}
+          {palette.err ? <i className={palette.emoji}></i> : palette.emoji}
         </div>
       </div>
     );
