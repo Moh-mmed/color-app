@@ -7,7 +7,8 @@ class PaletteList extends Component {
    goToPalette(id) {
       this.props.history.push(`/palette/${id}`)
     }
-    render() {
+  render() {
+      console.log(this.props.palettes);
         const { classes } = this.props
         const palettes = this.props.palettes.map((palette) => (
           <MinPalette palette={palette} handleClick={()=>this.goToPalette(palette.id)}/>

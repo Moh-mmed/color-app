@@ -18,7 +18,7 @@ function MinPalette(props) {
         </div>
         <div className={classes.footer}>
           <span>{palette.paletteName}</span>
-          <i className={palette.emoji}></i>
+          {palette.emoji}
         </div>
       </div>
     );

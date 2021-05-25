@@ -8,7 +8,7 @@ import Button from "@material-ui/core/Button";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import DraggableColorList from "./DraggableColorList";
 import { arrayMove } from "react-sortable-hoc";
-import { withStyles } from "@material-ui/styles";
+import { withStyles } from "@material-ui/core/styles";
 import PaletteFormNavBar from "./PaletteFormNavBar";
 import ColorPickerForm from "./ColorPickerForm";
 import useStyles from "./styles/NewPaletteStyles";

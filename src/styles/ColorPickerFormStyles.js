@@ -5,13 +5,14 @@ const ColorPickerFormStyles = {
   },
   addColor: {
     width: "100%",
-    padding: "1rem",
+    padding: ".5rem",
     marginTop: "1rem",
-    fontSize: "2rem",
+    fontFamily: "'Montserrat', sans-serif",
+    fontSize: "1.5rem",
   },
   colorNameInput: {
     width: "100%",
-    height: "70px",
+    height: "60px",
   },
 };
 

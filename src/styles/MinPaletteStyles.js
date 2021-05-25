@@ -1,14 +1,15 @@
 const MinPaletteStyles = {
   main: {
     padding: "9px",
+    margin: "15px",
     backgroundColor: "#ffffff",
     borderRadius: "4px",
-    height: "140px",
+    height: "170px",
     cursor: "pointer",
-    },
-    paletteLink: {
-       textDecoration: "none",
-  color: "inherit",
+  },
+  paletteLink: {
+    textDecoration: "none",
+    color: "inherit",
   },
   colors: {
     display: "grid",
@@ -22,7 +23,7 @@ const MinPaletteStyles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    fontSize: "12px",
+    fontSize: "0.9rem",
     margin: "5px 2px 0 2px",
     height: "20%",
   },

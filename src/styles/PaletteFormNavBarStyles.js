@@ -1,6 +1,6 @@
 import sizes from "./sizes";
 
-const drawerWidth = 500;
+const drawerWidth = 380;
 const PaletteFormNavBarStyles = (theme) => ({
   root: {
     display: "flex",
@@ -16,7 +16,10 @@ const PaletteFormNavBarStyles = (theme) => ({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    height: "64px",
+    height: "60px",
+    "& h6": {
+      fontFamily: "'Montserrat', sans-serif",
+    },
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -40,6 +43,7 @@ const PaletteFormNavBarStyles = (theme) => ({
     },
   },
   button: {
+    fontFamily: "'Montserrat', sans-serif",
     margin: "0 0.5rem",
     [sizes.down("xs")]: {
       margin: "0 0.2rem",

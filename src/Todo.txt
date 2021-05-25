@@ -1,9 +1,5 @@
 TODO:
 - [x] Create your app 
-- [ ] Install needed tools: 
-      - Material UI: for React component
-      - react-copy-to-clipboard: a package hepls to add copy to clipboard functionality  
-      - Chroma.js: a library to manipulate colors  
 
 
 
@@ -53,10 +49,34 @@ TODO:
 
 - [x] add an emoji picker using : npm install --save emoji-mart
 
+- [x] add Dialog using material UI / it shows a window dialog one clicking
+
 - [x] finishing the newPalette styles
+
+- [ ] edit save, goback bottom in paletteFormNavBar when shrinking to small screens
 
 - [ ] add to localstorage
 
 - [ ] edit styles
 
+- [ ] customize scroll bar
+
 - [ ] Puch all project to github
+
+
+Take away: 
+
+  Techs:
+
+      - react-copy-to-clipboard: a package hepls to add copy to clipboard functionality  
+      - Chroma.js: a library to manipulate colors' levels and generate colors automatically 
+      - Using drop MenuItem to select an Item from and a snackbar popping up from Material UI
+      - Using Color Picker  from "react-color" package
+      - using emojis from emoji-mart package:   emoji-mart
+      - Validate inputs using a package called react-material-ui-form-validator
+
+
+
+  Techniques
+
+      - Writing CSS styles in JSS format and use { withStyles } to wrap .js file with styles from "@material-ui/core/styles";

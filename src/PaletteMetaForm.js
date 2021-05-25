@@ -83,6 +83,7 @@ class PaletteMetaForm extends Component {
                 value={newPaletteName}
                 name="newPaletteName"
                 onChange={this.handleChange}
+                autoComplete="off"
                 fullWidth
                 margin="normal"
                 validators={["required", "isPaletteNameUnique"]}

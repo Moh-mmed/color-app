@@ -3,7 +3,7 @@ const PaletteListStyles = {
     display: "flex",
     justifyContent: "center",
     minHeight: "100vh",
-    width: "100vw",
+    // width: "100vw",
     padding: "30px 0",
     backgroundColor: "#1c0f2f",
     backgroundImage:
@@ -12,8 +12,7 @@ const PaletteListStyles = {
   container: {
     display: "flex",
     flexDirection: "column",
-    width: "60%",
-    paddingBottom: "40px",
+    width: "70%", //TODO
     overflowWrap: "normal",
   },
   head: {
@@ -42,11 +41,9 @@ const PaletteListStyles = {
   },
   palettes: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 30%)",
-    gap: "5%",
+    gridTemplateColumns: "repeat(4, 25%)",
     padding: "15px",
-    width: "80%",
-    margin: "0 auto",
+    width: "100%",
     }
 };
 export default PaletteListStyles;

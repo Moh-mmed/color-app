@@ -2,7 +2,7 @@ const seedColors = [
   {
     paletteName: "Material UI Colors",
     id: "material-ui-colors",
-    emoji: "em em-art",
+    emoji: "🎉",
     colors: [
       { name: "red", color: "#F44336" },
       { name: "pink", color: "#E91E63" },
@@ -28,7 +28,7 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors v1",
     id: "flat-ui-colors-v1",
-    emoji: "em em-call_me_hand",
+    emoji: "🏕️",
     colors: [
       { name: "Turquoise", color: "#1abc9c" },
       { name: "Emerald", color: "#2ecc71" },
@@ -55,7 +55,7 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors Dutch",
     id: "flat-ui-colors-dutch",
-    emoji: "em em-flag-de",
+    emoji: <i className="em em-flag-de"></i>,
     colors: [
       { name: "Sunflower", color: "#FFC312" },
       { name: "Energos", color: "#C4E538" },
@@ -82,7 +82,7 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors American",
     id: "flat-ui-colors-american",
-    emoji: "em em-flag-um",
+    emoji: <i className="em em-flag-um"></i>,
     colors: [
       { name: "LightGreenishBlue", color: "#55efc4" },
       { name: "FadedPoster", color: "#81ecec" },
@@ -109,7 +109,7 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors Aussie",
     id: "flat-ui-colors-aussie",
-    emoji: "em em-flag-au",
+    emoji: <i className="em em-flag-au"></i>,
     colors: [
       { name: "Beekeeper", color: "#f6e58d" },
       { name: "SpicedNectarine", color: "#ffbe76" },
@@ -136,7 +136,7 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors British",
     id: "flat-ui-colors-british",
-    emoji: "em em-flag-ge",
+    emoji: <i className="em em-flag-ge"></i>,
     colors: [
       { name: "ProtossPylon", color: "#00a8ff" },
       { name: "Periwinkle", color: "#9c88ff" },
@@ -163,7 +163,7 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors Spanish",
     id: "flat-ui-colors-spanish",
-    emoji: "em em-flag-ea",
+    emoji: <i className="em em-flag-ea"></i>,
     colors: [
       { name: "JacksonsPurple", color: "#40407a" },
       { name: "C64Purple", color: "#706fd3" },
@@ -190,7 +190,7 @@ const seedColors = [
   {
     paletteName: "Flat UI Colors Indian",
     id: "flat-ui-colors-indian",
-    emoji: "em em-flag-in",
+    emoji: <i className="em em-flag-in"></i>,
     colors: [
       { name: "OrchidOrange", color: "#FEA47F" },
       { name: "SpiroDiscoBall", color: "#25CCF7" },
@@ -213,33 +213,6 @@ const seedColors = [
       { name: "PineGlade", color: "#BDC581" },
       { name: "HighlighterLavender", color: "#82589F" },
     ],
-  },
-  {
-    paletteName: "Flat UI Colors French",
-    id: "flat-ui-colors-french",
-    emoji: "em em-fr",
-    colors: [
-      { name: "FlatFlesh", color: "#fad390" },
-      { name: "MelonMelody", color: "#f8c291" },
-      { name: "Livid", color: "#6a89cc" },
-      { name: "Spray", color: "#82ccdd" },
-      { name: "ParadiseGreen", color: "#b8e994" },
-      { name: "SquashBlossom", color: "#f6b93b" },
-      { name: "MandarinRed", color: "#e55039" },
-      { name: "AzraqBlue", color: "#4a69bd" },
-      { name: "Dupain", color: "#60a3bc" },
-      { name: "AuroraGreen", color: "#78e08f" },
-      { name: "IcelandPoppy", color: "#fa983a" },
-      { name: "TomatoRed", color: "#eb2f06" },
-      { name: "YueGuangBlue", color: "#1e3799" },
-      { name: "GoodSamaritan", color: "#3c6382" },
-      { name: "Waterfall", color: "#38ada9" },
-      { name: "CarrotOrange", color: "#e58e26" },
-      { name: "JalapenoRed", color: "#b71540" },
-      { name: "DarkSapphire", color: "#0c2461" },
-      { name: "ForestBlues", color: "#0a3d62" },
-      { name: "ReefEncounter", color: "#079992" },
-    ],
-  },
+  }
 ];
 export default seedColors
