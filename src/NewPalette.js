@@ -86,7 +86,6 @@ class NewPalette extends Component {
   };
 
   render() {
-    console.log(this.props)
     const { classes, maxColors, palettes } = this.props;
     const { open, colors } = this.state;
     const paletteIsFull = colors.length >= maxColors;

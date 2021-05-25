@@ -17,18 +17,30 @@ class Routes extends Component {
     };
     this.findPalette = this.findPalette.bind(this);
     this.saveNewPalette = this.saveNewPalette.bind(this);
+    this.deletePalette = this.deletePalette.bind(this);
   }
   findPalette(id) {
     return this.state.palettes.find((color) => color.id === id);
   }
   saveNewPalette(newPalette) {
-      this.setState(
-        { palettes: [...this.state.palettes, newPalette] },
-        this.updateLocalStorage
-      );
+    this.setState(
+      { palettes: [...this.state.palettes, newPalette] },
+      this.updateLocalStorage
+    );
+  }
+  deletePalette(id) {
+    this.setState(
+      (st) => ({
+        palettes: st.palettes.filter((palette) => palette.id !== id),
+      }),
+      this.updateLocalStorage
+    );
   }
   updateLocalStorage() {
-window.localStorage.setItem("palettes", JSON.stringify(this.state.palettes));
+    window.localStorage.setItem(
+      "palettes",
+      JSON.stringify(this.state.palettes)
+    );
   }
   render() {
     return (
@@ -64,7 +76,11 @@ window.localStorage.setItem("palettes", JSON.stringify(this.state.palettes));
             exact
             path="/"
             render={(routeProps) => (
-              <PaletteList {...routeProps} palettes={this.state.palettes} />
+              <PaletteList
+                {...routeProps}
+                palettes={this.state.palettes}
+                deletePalette={this.deletePalette}
+              />
             )}
           />
           <Route

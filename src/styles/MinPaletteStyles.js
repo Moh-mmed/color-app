@@ -1,11 +1,25 @@
 const MinPaletteStyles = {
   main: {
+    position: "relative",
     padding: "9px",
     margin: "15px",
     backgroundColor: "#ffffff",
     borderRadius: "4px",
     height: "170px",
     cursor: "pointer",
+  },
+  delete: {
+    position: "absolute",
+    top: "10px",
+    right: "8px",
+    "& svg": {
+      fontSize: "1.4rem",
+      color: "#494747",
+    },
+    "&:hover svg": {
+      color: "white",
+      transform: "scale(1.5)",
+    },
   },
   paletteLink: {
     textDecoration: "none",
