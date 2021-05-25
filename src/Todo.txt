@@ -51,10 +51,12 @@ TODO:
 
 - [x] Add draggable boxes and include them in newPalette route
 
-- [ ] finishing the newPalette 
+- [x] add an emoji picker using : npm install --save emoji-mart
 
-- [ ] add an emoji picker using : npm install --save emoji-mart
+- [x] finishing the newPalette styles
 
-- [ ] finishing the newPalette 
+- [ ] add to localstorage
+
+- [ ] edit styles
 
 - [ ] Puch all project to github
