@@ -1,3 +1,4 @@
+import sizes from "./sizes";
 const ColorStyles = {
   main: {
     display: "flex",
@@ -7,10 +8,16 @@ const ColorStyles = {
     overflow: "hidden",
   },
   colors: {
-    height: "calc(100% - 68px)",
+    height: "100%",
     width: "100%",
     display: "grid",
     gridTemplateColumns: "repeat(5, 20%)",
+    [sizes.down("md")]: {
+      gridTemplateColumns: "repeat(2, 50%)",
+    },
+    [sizes.down("xs")]: {
+      gridTemplateColumns: "repeat(1, 100%)",
+    },
   },
   goBack: {
     backgroundColor: "#9f9fa0",
@@ -18,13 +25,20 @@ const ColorStyles = {
     justifyContent: "center",
     alignItems: "center",
     "& span": {
-      backgroundColor: "#e6e6e6",
+      background: "rgba(255, 255, 255, 0.3)",
+      color: "white",
       padding: "5px",
       borderRadius: "5px",
       fontSize: "1.5rem",
-      fontWeight: 600,
       cursor: "pointer",
+    },
+    [sizes.down("md")]: {
+      height: "126px",
+    },
+    [sizes.down("xs")]: {
+      height: "63.3px",
+      fontSize: ".8rem",
     },
   },
 };
-export default ColorStyles
+export default ColorStyles;

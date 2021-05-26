@@ -7,19 +7,21 @@ const MinPaletteStyles = {
     borderRadius: "4px",
     height: "170px",
     cursor: "pointer",
-  },
-  delete: {
-    position: "absolute",
-    top: "10px",
-    right: "8px",
-    "& svg": {
-      fontSize: "1.4rem",
-      color: "#494747",
-    },
     "&:hover svg": {
       color: "white",
-      transform: "scale(1.5)",
+      opacity: 1,
     },
+  },
+  deleteIcon: {
+    position: "absolute",
+    top: "0px",
+    right: "0px",
+    backgroundColor: "#ff3e3e",
+    padding: "4px",
+    borderTopRightRadius: "4px",
+    opacity: 0,
+    fontSize: "1.8rem",
+    color: "#494747",
   },
   paletteLink: {
     textDecoration: "none",

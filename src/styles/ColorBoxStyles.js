@@ -1,4 +1,5 @@
 import chroma from "chroma-js";
+import sizes from "./sizes";
 const ColorBoxStyles = {
   root: {
     width: "20%",
@@ -6,11 +7,22 @@ const ColorBoxStyles = {
     margin: "0 auto",
     display: "inline-block",
     position: "relative",
-    cursor: "pointer",
     marginBottom: "-4px",
     "&:hover button": {
       opacity: 1,
       transition: "0.4s",
+    },
+    [sizes.down("lg")]: {
+      width: "25%",
+      height: "20%",
+    },
+    [sizes.down("md")]: {
+      width: "50%",
+      height: "10%",
+    },
+    [sizes.down("xs")]: {
+      width: "100%",
+      height: "5%",
     },
   },
   rootSingle: {
@@ -19,6 +31,12 @@ const ColorBoxStyles = {
     "&:hover button": {
       opacity: 1,
       transition: "0.4s",
+    },
+    [sizes.down("md")]: {
+      height: "126px",
+    },
+    [sizes.down("xs")]: {
+      height: "63.3px"
     },
   },
   copyButton: {
@@ -38,11 +56,18 @@ const ColorBoxStyles = {
     color: (props) =>
       chroma(props.background).luminance() <= 0.5 ? "white" : "black",
     fontSize: "1rem",
-    lineHeight: "30px",
+    lineHeight: "32px",
     textTransform: "uppercase",
     border: "none",
     borderRadius: "5px",
     opacity: 0,
+    cursor: "pointer",
+    [sizes.down("xs")]: {
+      width: "80px",
+      height: "25px",
+      lineHeight: "25px",
+      marginTop: "-12.5px",
+    },
   },
   boxContent: {
     position: "absolute",
@@ -71,13 +96,18 @@ const ColorBoxStyles = {
       chroma(props.background).luminance() <= 0.5 ? "white" : "black",
     width: "52px",
     height: "26px",
-    fontSize: "13px",
+    fontSize: "0.7rem",
     fontWeight: 600,
     textAlign: "center",
     lineHeight: "26px",
     textTransform: "uppercase",
     letterSpacing: "0.7px",
     cursor: "pointer",
+    [sizes.down("xs")]: {
+      width: "45px",
+      height: "22px",
+      lineHeight: "22px",
+    },
   },
   copiedOverlay: {
     opacity: 0,
@@ -103,8 +133,9 @@ const ColorBoxStyles = {
     left: 0,
     width: "100%",
     height: "100%",
-    zIndex: 0,
+    zIndex: -1,
     opacity: 0,
+    cursor: "default",
     color: (props) =>
       chroma(props.background).luminance() <= 0.5 ? "white" : "#6b6969",
     transform: "scale(0.1)",
@@ -121,6 +152,9 @@ const ColorBoxStyles = {
       textAlign: "center",
       textTransform: "uppercase",
       lineHeight: "30px",
+      [sizes.down("xs")]: {
+        fontSize: "1rem",
+      },
     },
     "& p": {
       marginTop: "5px",

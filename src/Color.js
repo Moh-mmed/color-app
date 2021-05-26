@@ -36,7 +36,7 @@ class Color extends Component {
   this.props.history.goBack();
     }
     render() {
-      const { paletteName , emoji,classes} = this.props;
+      const { paletteName, emoji, classes, err } = this.props;
       const {format,open} = this.state
     const shades = this.shades.map((color) => (
       <ColorBox
@@ -73,7 +73,7 @@ class Color extends Component {
           }}
           autoHideDuration={1500}
         />
-        <PaletteFooter paletteName={paletteName} emoji={emoji} />
+        <PaletteFooter paletteName={paletteName} emoji={emoji} err={err} />
       </div>
     );
   }

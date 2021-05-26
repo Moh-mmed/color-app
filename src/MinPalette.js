@@ -12,7 +12,11 @@ function MinPalette(props) {
         <div className={classes.delete}>
           <DeleteIcon
             className={classes.deleteIcon}
-            onClick={(e) => { e.stopPropagation();handleDelete()}}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleDelete();
+            }}
+            style={{ transition: "all 0.4s ease-in-out" }}
           />
         </div>
         <div className={classes.colors}>
@@ -26,7 +30,11 @@ function MinPalette(props) {
         </div>
         <div className={classes.footer}>
           <span>{palette.paletteName}</span>
-          {palette.err ? <i className={palette.emoji}></i> : palette.emoji}
+          {palette.err ? (
+            <i className={palette.emoji} aria-label="Germany Flag"></i>
+          ) : (
+            palette.emoji
+          )}
         </div>
       </div>
     );

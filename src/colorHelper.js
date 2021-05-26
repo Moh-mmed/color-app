@@ -5,6 +5,7 @@ function generatePalette(starterPalette) {
   let newPalette = {
     paletteName: starterPalette.paletteName,
     id: starterPalette.id,
+    err:starterPalette.err,
     emoji: starterPalette.emoji,
     colors: {},
   };
@@ -17,6 +18,7 @@ function generatePalette(starterPalette) {
       newPalette.colors[levels[i]].push({
         name: `${color.name} ${levels[i]}`,
         id: color.name.toLowerCase().replace(/ /g, "-"),
+        err: starterPalette.err,
         hex: scale[i],
         rgb: chroma(scale[i]).css(),
         rgba: chroma(scale[i])
