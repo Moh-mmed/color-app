@@ -82,6 +82,7 @@ Take away:
       - using emojis from emoji-mart package:   emoji-mart
       - Validate inputs using a package called react-material-ui-form-validator
       - Drag and drop components by turning them to sortable list using react-sortable-hoc package
+      - Transitions using npm install react-transition-group --save
 
 
 
