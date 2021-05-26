@@ -54,16 +54,16 @@ TODO:
 - [x] finishing the newPalette styles
 
 
-- [ ] add to localstorage
+- [x] add to localstorage
 
-- [ ] edit styles , save, goback bottom in paletteFormNavBar when shrinking to small screens (working with sizes file)
+- [x] edit styles , save, goback bottom in paletteFormNavBar when shrinking to small screens (working with sizes file)
 
 - [ ] customize scroll bar
 
 
 
 
-- [ ] clean up
+- [x] clean up
 
 
 

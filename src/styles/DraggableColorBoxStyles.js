@@ -24,7 +24,11 @@ const DraggableColorBoxStyles = {
     },
     [sizes.down("sm")]: {
       width: "100%",
-      height: "5%",
+      height: "5.261%",
+    },
+    [sizes.down("xs")]: {
+      width: "100%",
+      height: "5.3%",
     },
   },
   boxContent: {

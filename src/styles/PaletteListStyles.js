@@ -1,9 +1,9 @@
+import sizes from "./sizes";
 const PaletteListStyles = {
   root: {
     display: "flex",
     justifyContent: "center",
     minHeight: "100vh",
-    // width: "100vw",
     padding: "30px 0",
     backgroundColor: "#1c0f2f",
     backgroundImage:
@@ -12,38 +12,46 @@ const PaletteListStyles = {
   container: {
     display: "flex",
     flexDirection: "column",
-    width: "70%", //TODO
+    width: "70%",
     overflowWrap: "normal",
+    [sizes.down("sm")]: {
+      width: "90%",
+    },
   },
   head: {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center",
+    alignItems: "baseline",
     color: "white",
     padding: "10px 20px",
     margin: "10px 0 30px",
     "& h1": {
-        fontSize: "2.5rem"
-        }
+      fontSize: "2.5rem",
     },
-    newPaletteLink: {
+    [sizes.down("md")]: {
+      margin: "8px 0 25px",
+      "& h1": {
+        fontSize: "2rem",
+      },
+    },
+  },
+  newPaletteLink: {
     marginBottom: "-22px",
     color: "white",
-    textDecoration: "none",
-    "&::after": {
-        content: "''",
-        display: "block",
-        backgroundColor: "#ffffff",
-        width: "95%",
-        height: "1px",
-        margin: "0 auto",
-            }
   },
   palettes: {
     display: "grid",
     gridTemplateColumns: "repeat(4, 25%)",
     padding: "15px",
+    margin: "0 auto",
     width: "100%",
-    }
+    [sizes.down("md")]: {
+      gridTemplateColumns: "repeat(2, 50%)",
+      width: "75%",
+    },
+    [sizes.down("xs")]: {
+      gridTemplateColumns: "repeat(1, 100%)",
+    },
+  },
 };
 export default PaletteListStyles;
