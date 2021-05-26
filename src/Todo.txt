@@ -83,9 +83,12 @@ Take away:
       - Validate inputs using a package called react-material-ui-form-validator
       - Drag and drop components by turning them to sortable list using react-sortable-hoc package
       - Transitions using npm install react-transition-group --save
+      - Using Material ui colors
 
 
 
   Techniques
 
       - Writing CSS styles in JSS format and use { withStyles } to wrap .js file with styles from "@material-ui/core/styles";
+      - Use transition from react-transition-group 
+      - Use Material icons/items like (ListItem from "@material-ui/core/ListItem")for better organizing

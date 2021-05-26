@@ -3,9 +3,9 @@ import { withStyles } from '@material-ui/core/styles';
 import MinPaletteStyles from "./styles/MinPaletteStyles";
 import DeleteIcon from "@material-ui/icons/Delete";
 function MinPalette(props) {
-  const { classes, palette, deletePalette } = props;
+  const { classes, palette, openDialog } = props;
   function handleDelete() {
-    deletePalette(palette.id)
+    openDialog(palette.id)
   }
     return (
       <div className={classes.main} onClick={props.handleClick}>
