@@ -58,7 +58,6 @@ TODO:
 
 - [x] edit styles , save, goback bottom in paletteFormNavBar when shrinking to small screens (working with sizes file)
 
-- [ ] customize scroll bar
 
 
 
@@ -66,9 +65,6 @@ TODO:
 - [x] clean up
 
 
-
-
-- [ ] Puch all project to github
 
 
 Take away: 
@@ -84,6 +80,7 @@ Take away:
       - Drag and drop components by turning them to sortable list using react-sortable-hoc package
       - Transitions using npm install react-transition-group --save
       - Using Material ui colors
+      - Using Material ui classNames
 
 
 
@@ -92,3 +89,5 @@ Take away:
       - Writing CSS styles in JSS format and use { withStyles } to wrap .js file with styles from "@material-ui/core/styles";
       - Use transition from react-transition-group 
       - Use Material icons/items like (ListItem from "@material-ui/core/ListItem")for better organizing
+      - To prevent rendering all components when a palette is deleted, PureComponent from React is used to React.PureComponent
+            React.PureComponent is similar to React.Component. The difference between them is that React.Component doesn’t implement shouldComponentUpdate(), but React.PureComponent implements it with a shallow prop and state comparison. (learn more about it)

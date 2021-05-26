@@ -42,7 +42,6 @@ class PaletteList extends Component {
   }
   render() {
     const { classes, palettes } = this.props;
-
     return (
       <div className={classes.root}>
         <div className={classes.container}>

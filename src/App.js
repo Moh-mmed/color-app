@@ -54,7 +54,7 @@ class App extends Component {
                   exact
                   path="/palette/new-palette"
                   render={(routeProps) => (
-                   <Page>
+                    <Page>
                       <NewPalette
                         saveNewPalette={this.saveNewPalette}
                         palettes={this.state.palettes}
@@ -63,13 +63,13 @@ class App extends Component {
                     </Page>
                   )}
                 />
-                ;
+
                 <Route
                   exact
                   path="/palette/:name"
                   render={(routeProps) => {
                     return (
-                     <Page>
+                      <Page>
                         <Palette
                           {...routeProps}
                           palette={generatePalette(
@@ -83,27 +83,39 @@ class App extends Component {
                 <Route
                   exact
                   path="/"
-                          render={(routeProps) => (
-                   <Page>
-                    <PaletteList
-                      {...routeProps}
-                      palettes={this.state.palettes}
-                      deletePalette={this.deletePalette}
-                    />
+                  render={(routeProps) => (
+                    <Page>
+                      <PaletteList
+                        {...routeProps}
+                        palettes={this.state.palettes}
+                        deletePalette={this.deletePalette}
+                      />
                     </Page>
                   )}
                 />
                 <Route
                   exact
                   path="/palette/:paletteID/:colorID"
-                                render={(routeProps) => (
-                   <Page>
-                    <Color
-                      {...routeProps}
-                      {...generatePalette(
-                        this.findPalette(routeProps.match.params.paletteID)
-                      )}
-                    />
+                  render={(routeProps) => (
+                    <Page>
+                      <Color
+                        {...routeProps}
+                        {...generatePalette(
+                          this.findPalette(routeProps.match.params.paletteID)
+                        )}
+                      />
+                    </Page>
+                  )}
+                />
+                <Route
+       
+                  render={(routeProps) => (
+                    <Page>
+                      <PaletteList
+                        {...routeProps}
+                        palettes={this.state.palettes}
+                        deletePalette={this.deletePalette}
+                      />
                     </Page>
                   )}
                 />
