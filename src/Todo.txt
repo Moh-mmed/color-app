@@ -91,3 +91,4 @@ Take away:
       - Use Material icons/items like (ListItem from "@material-ui/core/ListItem")for better organizing
       - To prevent rendering all components when a palette is deleted, PureComponent from React is used to React.PureComponent
             React.PureComponent is similar to React.Component. The difference between them is that React.Component doesn’t implement shouldComponentUpdate(), but React.PureComponent implements it with a shallow prop and state comparison. (learn more about it)
+      - Use classNames package, A simple JavaScript utility for conditionally joining classNames together.     

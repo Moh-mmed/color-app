@@ -8,7 +8,6 @@ import Page from './Page'
 import Color from "./Color";
 import { generatePalette } from "./colorHelper";
 import seedColors from "./seedColors";
-
 class App extends Component {
   constructor(props) {
     super(props);
