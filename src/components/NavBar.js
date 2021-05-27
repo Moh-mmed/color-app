@@ -5,7 +5,7 @@ import {withStyles} from '@material-ui/styles'
 import Select from "@material-ui/core/Select"
 import MenuItem from "@material-ui/core/MenuItem"
 import "rc-slider/assets/index.css"
-import NavBarStyles from "./styles/NavBarStyles";
+import NavBarStyles from "../styles/NavBarStyles";
 class NavBar extends Component {
   constructor(props) {
     super(props);

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { withStyles } from "@material-ui/core/styles";
 import { Link } from 'react-router-dom'
-import ColorBoxStyles from "./styles/ColorBoxStyles";
+import ColorBoxStyles from "../styles/ColorBoxStyles";
 class ColorBox extends Component {
     constructor(props) {
         super(props)

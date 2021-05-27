@@ -11,8 +11,8 @@ import { arrayMove } from "react-sortable-hoc";
 import { withStyles } from "@material-ui/core/styles";
 import PaletteFormNavBar from "./PaletteFormNavBar";
 import ColorPickerForm from "./ColorPickerForm";
-import useStyles from "./styles/NewPaletteStyles";
-import seedColors from "./seedColors";
+import useStyles from "../styles/NewPaletteStyles";
+import seedColors from "../seedColors";
 
 class NewPalette extends Component {
   static defaultProps = {
